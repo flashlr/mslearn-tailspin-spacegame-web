@@ -1,3 +1,6 @@
+variables:
+
+
 parameters:
 - name: image
   displayName: Pool Image
@@ -9,7 +12,8 @@ parameters:
   - macOS-latest
 
 trigger:
-- '*'
+- none
+
 
 pool:
   vmImage: ${{ parameters.image }}
@@ -18,6 +22,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  one: 'test'
 
 steps:
 - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
