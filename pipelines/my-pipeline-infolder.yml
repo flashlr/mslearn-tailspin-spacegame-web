@@ -22,7 +22,6 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  one: 'test'
 
 steps:
 - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
