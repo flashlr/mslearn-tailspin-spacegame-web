@@ -14,7 +14,7 @@ trigger:
 
 
 pool:
-  vmImage: ${{ parameters.image }}
+  vmImage: ubuntu-latest
   demands:
   - npm
 
