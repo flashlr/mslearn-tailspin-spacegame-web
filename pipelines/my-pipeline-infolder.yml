@@ -1,9 +1,18 @@
+parameters:
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu-latest
+  values:
+  - windows-latest
+  - ubuntu-latest
+  - macOS-latest
 
 trigger:
 - '*'
 
 pool:
-  vmImage: 'ubuntu-20.04'
+  vmImage: ${{parameters.image}}
   demands:
   - npm
 
@@ -11,6 +20,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
+
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 5.x'
   inputs:
