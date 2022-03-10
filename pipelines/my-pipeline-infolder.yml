@@ -1,6 +1,3 @@
-variables:
-
-
 parameters:
 - name: image
   displayName: Pool Image
@@ -22,6 +19,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  one:'default value mine'
 
 steps:
 - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
