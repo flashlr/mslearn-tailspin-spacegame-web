@@ -1,3 +1,4 @@
+name: My Test Pipeline
 parameters:
 - name: image
   displayName: Pool Image
