@@ -12,7 +12,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: ${{parameters.image}}
+  vmImage: ${{ parameters.image }}
   demands:
   - npm
 
