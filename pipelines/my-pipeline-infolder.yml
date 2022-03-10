@@ -18,8 +18,10 @@ pool:
   - npm
 
 variables:
-  buildConfiguration: 'Release'
-  one:'default value mine'
+  - name: buildConfiguration
+    value: Release
+  - name: one
+    value: initialValue 
 
 steps:
 - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
